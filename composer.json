@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": "2.*",
+        "symfony/framework-bundle": "2.* || 3.*",
         "webmil/text-language-detect": "master-dev"
     },
     "autoload": {
