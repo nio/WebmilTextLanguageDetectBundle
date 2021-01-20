@@ -18,9 +18,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-
-        $root = $treeBuilder->root('webmil_text_language_detect');
+        $treeBuilder = new TreeBuilder('webmil_text_language_detect');
+        $root = method_exists('Symfony\Component\Config\Definition\Builder\TreeBuilder', 'getRootNode') ? $builder->getRootNode() : $builder->root('webmil_text_language_detect');
 
         $root
             ->children()
